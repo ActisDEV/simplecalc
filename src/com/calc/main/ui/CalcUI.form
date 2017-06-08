@@ -161,31 +161,49 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x421;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x435;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="plusButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="minusButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x447;&#x438;&#x442;&#x430;&#x43d;&#x438;&#x435;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="minusButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="slashButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x414;&#x435;&#x43b;&#x435;&#x43d;&#x438;&#x435;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="slashButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="starButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x423;&#x43c;&#x43d;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x435;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="starButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="powButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x412;&#x43e;&#x437;&#x432;&#x435;&#x434;&#x435;&#x43d;&#x438;&#x435;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="powButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="sqrButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x440;&#x435;&#x43d;&#x44c;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sqrButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="resultLabel">
           <Properties>
@@ -209,11 +227,17 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x41e;&#x447;&#x438;&#x441;&#x442;&#x438;&#x442;&#x44c;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="exitButton">
           <Properties>
             <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x439;&#x442;&#x438;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitButtonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -1,7 +1,25 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * The MIT License
+ *
+ * Copyright 2017 actis.pro.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  */
 package com.calc.main.ui;
 
@@ -11,6 +29,9 @@ package com.calc.main.ui;
  */
 public class CalcUI extends javax.swing.JFrame {
 
+    double num1;
+    double num2;
+    double result;
     /**
      * Creates new form CalcUI
      */
@@ -56,16 +77,46 @@ public class CalcUI extends javax.swing.JFrame {
         operatorsLabel.setText("Действия");
 
         plusButton.setText("Сложение");
+        plusButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                plusButtonActionPerformed(evt);
+            }
+        });
 
         minusButton.setText("Вычитание");
+        minusButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                minusButtonActionPerformed(evt);
+            }
+        });
 
         slashButton.setText("Деление");
+        slashButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                slashButtonActionPerformed(evt);
+            }
+        });
 
         starButton.setText("Умножение");
+        starButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                starButtonActionPerformed(evt);
+            }
+        });
 
         powButton.setText("Возведение");
+        powButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                powButtonActionPerformed(evt);
+            }
+        });
 
         sqrButton.setText("Корень");
+        sqrButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sqrButtonActionPerformed(evt);
+            }
+        });
 
         resultLabel.setText("Результат");
 
@@ -75,8 +126,18 @@ public class CalcUI extends javax.swing.JFrame {
         operatorsLabel1.setText("actis.pro 2014-2017. Лицензия MIT.");
 
         clearButton.setText("Очистить");
+        clearButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearButtonActionPerformed(evt);
+            }
+        });
 
         exitButton.setText("Выйти");
+        exitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
@@ -171,39 +232,71 @@ public class CalcUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void plusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_plusButtonActionPerformed
+        num1 = Double.parseDouble(num1Text.getText());
+        num2 = Double.parseDouble(num2Text.getText());
+        result = num1 + num2;
+        resultTextBlocked.setText(String.valueOf(result));
+    }//GEN-LAST:event_plusButtonActionPerformed
+
+    private void minusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButtonActionPerformed
+        num1 = Double.parseDouble(num1Text.getText());
+        num2 = Double.parseDouble(num2Text.getText());
+        result = num1 - num2;
+        resultTextBlocked.setText(String.valueOf(result));
+    }//GEN-LAST:event_minusButtonActionPerformed
+
+    private void slashButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_slashButtonActionPerformed
+        num1 = Double.parseDouble(num1Text.getText());
+        num2 = Double.parseDouble(num2Text.getText());
+        result = num1 / num2;
+        resultTextBlocked.setText(String.valueOf(result));       
+    }//GEN-LAST:event_slashButtonActionPerformed
+
+    private void starButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_starButtonActionPerformed
+        num1 = Double.parseDouble(num1Text.getText());
+        num2 = Double.parseDouble(num2Text.getText());
+        result = num1 * num2;
+        resultTextBlocked.setText(String.valueOf(result));
+    }//GEN-LAST:event_starButtonActionPerformed
+
+    private void powButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powButtonActionPerformed
+        num1 = Double.parseDouble(num1Text.getText());
+        num2 = Double.parseDouble(num2Text.getText());
+        result = Math.pow(num1, num2);
+        resultTextBlocked.setText(String.valueOf(result));
+    }//GEN-LAST:event_powButtonActionPerformed
+
+    private void sqrButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sqrButtonActionPerformed
+        num1 = Double.parseDouble(num1Text.getText());
+        num2 = Double.parseDouble(num2Text.getText());
+        result = Math.pow(num1, 1.0 /num2);
+        resultTextBlocked.setText(String.valueOf(result));
+    }//GEN-LAST:event_sqrButtonActionPerformed
+
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
+        num1Text.setText("");
+        num2Text.setText("");
+        resultTextBlocked.setText("");
+    }//GEN-LAST:event_clearButtonActionPerformed
+
+    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
+        System.out.println("Ну и вали нахуй отсюда!"); //это же никто не прочитает, ага?
+        System.exit(0);
+    }//GEN-LAST:event_exitButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CalcUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CalcUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CalcUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CalcUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new CalcUI().setVisible(true);
             }
         });
+        System.out.println("actis.pro 2014-2017. ПО распространяется по лицензии MIT");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
