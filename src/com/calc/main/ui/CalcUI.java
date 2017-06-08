@@ -32,6 +32,7 @@ public class CalcUI extends javax.swing.JFrame {
     double num1;
     double num2;
     double result;
+    String GradRad;
     /**
      * Creates new form CalcUI
      */
@@ -48,17 +49,6 @@ public class CalcUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        help = new javax.swing.JDialog();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
         mainPanel = new javax.swing.JPanel();
         num1Label = new javax.swing.JLabel();
         num1Text = new javax.swing.JTextField();
@@ -88,87 +78,22 @@ public class CalcUI extends javax.swing.JFrame {
         arccotButton = new javax.swing.JButton();
         helpButton = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Справка");
-
-        jLabel2.setText("Стандартные бинарные операции (+, -, *, /). Первое число - основное, второе ");
-
-        jLabel3.setText("может быть вычитыаемым или делителем.");
-
-        jLabel4.setText("Возведение в степень/извлечение корня - первое число является возводимым, второе");
-
-        jLabel5.setText("основанием.");
-
-        jLabel6.setText("Логарифмы - log является натуральным логарифмом (по e), а log10 - десятичным. В кач-");
-
-        jLabel7.setText("естве второго числа подставляется основание (e или 10).");
-
-        jLabel8.setText("Тригонометрические функции - первым числом введите угол, вторым параметр (rad/grad)");
-
-        jLabel9.setText("grad - если угол в градусах, rad - если в радианах.");
-
-        jButton1.setText("OK");
-
-        javax.swing.GroupLayout helpLayout = new javax.swing.GroupLayout(help.getContentPane());
-        help.getContentPane().setLayout(helpLayout);
-        helpLayout.setHorizontalGroup(
-            helpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(helpLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(helpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9)
-                    .addGroup(helpLayout.createSequentialGroup()
-                        .addGap(195, 195, 195)
-                        .addComponent(jButton1))
-                    .addGroup(helpLayout.createSequentialGroup()
-                        .addGap(183, 183, 183)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        helpLayout.setVerticalGroup(
-            helpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(helpLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         mainPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("SimpleCalc by Actis"));
 
         num1Label.setText("Первое число");
 
+        num1Text.setToolTipText("Любое число");
+
         num2Label.setText("Второе число");
+
+        num2Text.setToolTipText("В тригонометрических функциях здесь нужно поставить парматры grad или rad.");
 
         operatorsLabel.setText("Действия");
 
         plusButton.setText("Сложение");
+        plusButton.setToolTipText("a + b");
         plusButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 plusButtonActionPerformed(evt);
@@ -176,6 +101,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         minusButton.setText("Вычитание");
+        minusButton.setToolTipText("a - b");
         minusButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 minusButtonActionPerformed(evt);
@@ -183,6 +109,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         slashButton.setText("Деление");
+        slashButton.setToolTipText("a - b");
         slashButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 slashButtonActionPerformed(evt);
@@ -190,6 +117,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         starButton.setText("Умножение");
+        starButton.setToolTipText("a * b");
         starButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 starButtonActionPerformed(evt);
@@ -197,6 +125,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         powButton.setText("Возведение");
+        powButton.setToolTipText("a^b");
         powButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 powButtonActionPerformed(evt);
@@ -204,6 +133,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         sqrButton.setText("Корень");
+        sqrButton.setToolTipText("a^(1/b)");
         sqrButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sqrButtonActionPerformed(evt);
@@ -232,6 +162,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         logButton.setText("log");
+        logButton.setToolTipText("log(a)");
         logButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logButtonActionPerformed(evt);
@@ -239,6 +170,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         log10Button.setText("log10");
+        log10Button.setToolTipText("log10(a)");
         log10Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 log10ButtonActionPerformed(evt);
@@ -246,6 +178,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         sinButton.setText("sin");
+        sinButton.setToolTipText("sin(a) ");
         sinButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sinButtonActionPerformed(evt);
@@ -253,6 +186,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         cosButton.setText("cos");
+        cosButton.setToolTipText("cos(a)");
         cosButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cosButtonActionPerformed(evt);
@@ -260,6 +194,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         tanButton.setText("tan");
+        tanButton.setToolTipText("tan(a)");
         tanButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tanButtonActionPerformed(evt);
@@ -267,6 +202,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         cotButton.setText("cot");
+        cotButton.setToolTipText("cot(a)");
         cotButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cotButtonActionPerformed(evt);
@@ -274,6 +210,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         arcsinButton.setText("arcsin");
+        arcsinButton.setToolTipText("arcsin(a)");
         arcsinButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 arcsinButtonActionPerformed(evt);
@@ -281,6 +218,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         arccosButton.setText("arccos");
+        arccosButton.setToolTipText("arccos(a)");
         arccosButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 arccosButtonActionPerformed(evt);
@@ -288,6 +226,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         arctanButton.setText("arctan");
+        arctanButton.setToolTipText("arctan(a)");
         arctanButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 arctanButtonActionPerformed(evt);
@@ -295,6 +234,7 @@ public class CalcUI extends javax.swing.JFrame {
         });
 
         arccotButton.setText("arccot");
+        arccotButton.setToolTipText("arccot(a)");
         arccotButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 arccotButtonActionPerformed(evt);
@@ -484,47 +424,174 @@ public class CalcUI extends javax.swing.JFrame {
     }//GEN-LAST:event_exitButtonActionPerformed
 
     private void logButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logButtonActionPerformed
-        // TODO add your handling code here:
+        num1 = Double.parseDouble(num1Text.getText());
+        num2Text.setText(String.valueOf(Math.E));
+        result = Math.log(num1);
+        resultTextBlocked.setText(String.valueOf(result));
     }//GEN-LAST:event_logButtonActionPerformed
 
     private void log10ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_log10ButtonActionPerformed
-        // TODO add your handling code here:
+        num1 = Double.parseDouble(num1Text.getText());
+        num2Text.setText("10");
+        result = Math.log10(num1);
+        resultTextBlocked.setText(String.valueOf(result));
     }//GEN-LAST:event_log10ButtonActionPerformed
 
     private void sinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinButtonActionPerformed
-        // TODO add your handling code here:
+        GradRad = num2Text.getText();
+        num1 = Double.parseDouble(num1Text.getText());
+        switch (GradRad) {
+            case "rad":
+                result = Math.sin(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            case "grad":
+                num1 = Math.toRadians(num1);
+                result = Math.sin(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            default:
+                resultTextBlocked.setText("ERROR! Используйте grad или rad в качестве второго числа!");
+                break;
+        }
     }//GEN-LAST:event_sinButtonActionPerformed
 
     private void cosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosButtonActionPerformed
-        // TODO add your handling code here:
+        GradRad = num2Text.getText();
+        num1 = Double.parseDouble(num1Text.getText());
+        switch (GradRad) {
+            case "rad":
+                result = Math.cos(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            case "grad":
+                num1 = Math.toRadians(num1);
+                result = Math.cos(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            default:
+                resultTextBlocked.setText("ERROR! Используйте grad или rad в качестве второго числа!");
+                break;
+        }
     }//GEN-LAST:event_cosButtonActionPerformed
 
     private void tanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanButtonActionPerformed
-        // TODO add your handling code here:
+         GradRad = num2Text.getText();
+        num1 = Double.parseDouble(num1Text.getText());
+        switch (GradRad) {
+            case "rad":
+                result = Math.tan(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            case "grad":
+                num1 = Math.toRadians(num1);
+                result = Math.tan(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            default:
+                resultTextBlocked.setText("ERROR! Используйте grad или rad в качестве второго числа!");
+                break;
+        }
     }//GEN-LAST:event_tanButtonActionPerformed
 
     private void cotButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cotButtonActionPerformed
-        // TODO add your handling code here:
+        GradRad = num2Text.getText();
+        num1 = Double.parseDouble(num1Text.getText());
+        switch (GradRad) {
+            case "rad":
+                result = Math.cos(num1) / Math.sin(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            case "grad":
+                num1 = Math.toRadians(num1);
+                result = Math.cos(num1) / Math.sin(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            default:
+                resultTextBlocked.setText("ERROR! Используйте grad или rad в качестве второго числа!");
+                break;
+        }
     }//GEN-LAST:event_cotButtonActionPerformed
 
     private void arcsinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arcsinButtonActionPerformed
-        // TODO add your handling code here:
+        GradRad = num2Text.getText();
+        num1 = Double.parseDouble(num1Text.getText());
+        switch (GradRad) {
+            case "rad":
+                result = Math.asin(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            case "grad":
+                result = Math.asin(num1);
+                result = Math.toDegrees(result);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            default:
+                resultTextBlocked.setText("ERROR! Используйте grad или rad в качестве второго числа!");
+                break;
+        }
     }//GEN-LAST:event_arcsinButtonActionPerformed
 
     private void arccosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arccosButtonActionPerformed
-        // TODO add your handling code here:
+        GradRad = num2Text.getText();
+        num1 = Double.parseDouble(num1Text.getText());
+        switch (GradRad) {
+            case "rad":
+                result = Math.acos(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            case "grad":
+                result = Math.acos(num1);
+                result = Math.toDegrees(result);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            default:
+                resultTextBlocked.setText("ERROR! Используйте grad или rad в качестве второго числа!");
+                break;
+        }
     }//GEN-LAST:event_arccosButtonActionPerformed
 
     private void arctanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arctanButtonActionPerformed
-        // TODO add your handling code here:
+        GradRad = num2Text.getText();
+        num1 = Double.parseDouble(num1Text.getText());
+        switch (GradRad) {
+            case "rad":
+                result = Math.atan(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            case "grad":
+                result = Math.atan(num1);
+                result = Math.toDegrees(result);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            default:
+                resultTextBlocked.setText("ERROR! Используйте grad или rad в качестве второго числа!");
+                break;
+        }
     }//GEN-LAST:event_arctanButtonActionPerformed
 
     private void arccotButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arccotButtonActionPerformed
-        // TODO add your handling code here:
+        GradRad = num2Text.getText();
+        num1 = Double.parseDouble(num1Text.getText());
+        switch (GradRad) {
+            case "rad":
+                result = Math.acos(num1) / Math.asin(num1);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            case "grad":
+                result = Math.acos(num1) / Math.asin(num1);
+                result = Math.toDegrees(result);
+                resultTextBlocked.setText(String.valueOf(result));
+                break;
+            default:
+                resultTextBlocked.setText("ERROR! Используйте grad или rad в качестве второго числа!");
+                break;
+        }
     }//GEN-LAST:event_arccotButtonActionPerformed
 
     private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
-        // TODO add your handling code here:
+        HelpUI helpdialog = new HelpUI();
+        helpdialog.setVisible (true);
     }//GEN-LAST:event_helpButtonActionPerformed
 
     /**
@@ -551,9 +618,20 @@ public class CalcUI extends javax.swing.JFrame {
     private javax.swing.JButton cotButton;
     private javax.swing.JButton exitButton;
     private javax.swing.JDialog help;
+    private javax.swing.JDialog help1;
     private javax.swing.JButton helpButton;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
