@@ -63,7 +63,7 @@ public class CalcUI extends javax.swing.JFrame {
         sqrButton = new javax.swing.JButton();
         resultLabel = new javax.swing.JLabel();
         resultTextBlocked = new javax.swing.JTextField();
-        operatorsLabel1 = new javax.swing.JLabel();
+        creditLabel = new javax.swing.JLabel();
         clearButton = new javax.swing.JButton();
         exitButton = new javax.swing.JButton();
         logButton = new javax.swing.JButton();
@@ -77,6 +77,16 @@ public class CalcUI extends javax.swing.JFrame {
         arctanButton = new javax.swing.JButton();
         arccotButton = new javax.swing.JButton();
         helpButton = new javax.swing.JButton();
+        secButton = new javax.swing.JButton();
+        cosecButton = new javax.swing.JButton();
+        arcsecButton = new javax.swing.JButton();
+        arccosecButton = new javax.swing.JButton();
+        hsinButton = new javax.swing.JButton();
+        hcosButton = new javax.swing.JButton();
+        htanButton1 = new javax.swing.JButton();
+        hcotButton = new javax.swing.JButton();
+        hsecButton = new javax.swing.JButton();
+        hcosecButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -144,8 +154,8 @@ public class CalcUI extends javax.swing.JFrame {
 
         resultTextBlocked.setEditable(false);
 
-        operatorsLabel1.setForeground(new java.awt.Color(0, 0, 204));
-        operatorsLabel1.setText("actis.pro 2014-2017. Лицензия MIT.");
+        creditLabel.setForeground(new java.awt.Color(0, 0, 204));
+        creditLabel.setText("Denis Karev 2008-2017. Лицензия MIT.");
 
         clearButton.setText("Очистить");
         clearButton.addActionListener(new java.awt.event.ActionListener() {
@@ -248,6 +258,86 @@ public class CalcUI extends javax.swing.JFrame {
             }
         });
 
+        secButton.setText("sec");
+        secButton.setToolTipText("sin(a) ");
+        secButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                secButtonActionPerformed(evt);
+            }
+        });
+
+        cosecButton.setText("cosec");
+        cosecButton.setToolTipText("sin(a) ");
+        cosecButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cosecButtonActionPerformed(evt);
+            }
+        });
+
+        arcsecButton.setText("arcsec");
+        arcsecButton.setToolTipText("arccot(a)");
+        arcsecButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                arcsecButtonActionPerformed(evt);
+            }
+        });
+
+        arccosecButton.setText("arccosec");
+        arccosecButton.setToolTipText("arccot(a)");
+        arccosecButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                arccosecButtonActionPerformed(evt);
+            }
+        });
+
+        hsinButton.setText("hsin");
+        hsinButton.setToolTipText("arccot(a)");
+        hsinButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hsinButtonActionPerformed(evt);
+            }
+        });
+
+        hcosButton.setText("hcos");
+        hcosButton.setToolTipText("arccot(a)");
+        hcosButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hcosButtonActionPerformed(evt);
+            }
+        });
+
+        htanButton1.setText("htan");
+        htanButton1.setToolTipText("arccot(a)");
+        htanButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                htanButton1ActionPerformed(evt);
+            }
+        });
+
+        hcotButton.setText("hcot");
+        hcotButton.setToolTipText("arccot(a)");
+        hcotButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hcotButtonActionPerformed(evt);
+            }
+        });
+
+        hsecButton.setText("hsec");
+        hsecButton.setToolTipText("arccot(a)");
+        hsecButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hsecButtonActionPerformed(evt);
+            }
+        });
+
+        hcosecButton.setText("hcosec");
+        hcosecButton.setToolTipText("arccot(a)");
+        hcosecButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hcosecButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
@@ -259,11 +349,8 @@ public class CalcUI extends javax.swing.JFrame {
                     .addComponent(num2Text, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(resultTextBlocked, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(resultLabel)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(operatorsLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(creditLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
                         .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(clearButton)
@@ -271,34 +358,66 @@ public class CalcUI extends javax.swing.JFrame {
                         .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(mainPanelLayout.createSequentialGroup()
                         .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(arcsinButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(hsinButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(sinButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(num1Label, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(num2Label, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(operatorsLabel, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(plusButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(minusButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                            .addComponent(powButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(arcsinButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(starButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(mainPanelLayout.createSequentialGroup()
+                                    .addComponent(arccosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(arctanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(mainPanelLayout.createSequentialGroup()
+                                        .addComponent(sqrButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(logButton, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(tanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(cosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addComponent(slashButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(cosButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(arccosButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(powButton, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                            .addComponent(sqrButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(tanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(arctanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(hcosButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(htanButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(logButton, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                            .addComponent(log10Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cotButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(arccotButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(58, 58, 58)))
+                            .addGroup(mainPanelLayout.createSequentialGroup()
+                                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cotButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(arccotButton, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(secButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(arcsecButton, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cosecButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(arccosecButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(mainPanelLayout.createSequentialGroup()
+                                .addComponent(hcotButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(hsecButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(hcosecButton, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(operatorsLabel)
+                            .addComponent(num2Label)
+                            .addComponent(num1Label)
+                            .addComponent(resultLabel)
+                            .addGroup(mainPanelLayout.createSequentialGroup()
+                                .addComponent(plusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(slashButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(minusButton, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(starButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(mainPanelLayout.createSequentialGroup()
+                                .addGap(323, 323, 323)
+                                .addComponent(log10Button, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         mainPanelLayout.setVerticalGroup(
@@ -308,9 +427,9 @@ public class CalcUI extends javax.swing.JFrame {
                 .addComponent(num1Label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(num1Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(num2Label)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(1, 1, 1)
                 .addComponent(num2Text, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(operatorsLabel)
@@ -318,33 +437,45 @@ public class CalcUI extends javax.swing.JFrame {
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(plusButton)
                     .addComponent(slashButton)
-                    .addComponent(powButton)
-                    .addComponent(logButton))
+                    .addComponent(minusButton)
+                    .addComponent(starButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(minusButton)
-                    .addComponent(starButton)
                     .addComponent(sqrButton)
-                    .addComponent(log10Button))
+                    .addComponent(log10Button)
+                    .addComponent(powButton)
+                    .addComponent(logButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(sinButton)
                     .addComponent(cosButton)
                     .addComponent(tanButton)
-                    .addComponent(cotButton))
+                    .addComponent(cotButton)
+                    .addComponent(secButton)
+                    .addComponent(cosecButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(arcsinButton)
                     .addComponent(arccosButton)
                     .addComponent(arctanButton)
-                    .addComponent(arccotButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                    .addComponent(arccotButton)
+                    .addComponent(arcsecButton)
+                    .addComponent(arccosecButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(hsinButton)
+                    .addComponent(hcosButton)
+                    .addComponent(htanButton1)
+                    .addComponent(hcotButton)
+                    .addComponent(hsecButton)
+                    .addComponent(hcosecButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(resultLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(resultTextBlocked, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(operatorsLabel1)
+                    .addComponent(creditLabel)
                     .addComponent(clearButton)
                     .addComponent(exitButton)
                     .addComponent(helpButton)))
@@ -593,6 +724,46 @@ public class CalcUI extends javax.swing.JFrame {
         helpdialog.setVisible (true);
     }//GEN-LAST:event_helpButtonActionPerformed
 
+    private void secButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_secButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_secButtonActionPerformed
+
+    private void cosecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosecButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cosecButtonActionPerformed
+
+    private void arcsecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arcsecButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_arcsecButtonActionPerformed
+
+    private void arccosecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arccosecButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_arccosecButtonActionPerformed
+
+    private void hsinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hsinButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hsinButtonActionPerformed
+
+    private void hcosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hcosButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hcosButtonActionPerformed
+
+    private void htanButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_htanButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_htanButton1ActionPerformed
+
+    private void hcotButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hcotButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hcotButtonActionPerformed
+
+    private void hsecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hsecButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hsecButtonActionPerformed
+
+    private void hcosecButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hcosecButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hcosecButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -609,36 +780,24 @@ public class CalcUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton arccosButton;
+    private javax.swing.JButton arccosecButton;
     private javax.swing.JButton arccotButton;
+    private javax.swing.JButton arcsecButton;
     private javax.swing.JButton arcsinButton;
     private javax.swing.JButton arctanButton;
     private javax.swing.JButton clearButton;
     private javax.swing.JButton cosButton;
+    private javax.swing.JButton cosecButton;
     private javax.swing.JButton cotButton;
+    private javax.swing.JLabel creditLabel;
     private javax.swing.JButton exitButton;
-    private javax.swing.JDialog help;
-    private javax.swing.JDialog help1;
+    private javax.swing.JButton hcosButton;
+    private javax.swing.JButton hcosecButton;
+    private javax.swing.JButton hcotButton;
     private javax.swing.JButton helpButton;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton hsecButton;
+    private javax.swing.JButton hsinButton;
+    private javax.swing.JButton htanButton1;
     private javax.swing.JButton log10Button;
     private javax.swing.JButton logButton;
     private javax.swing.JPanel mainPanel;
@@ -648,11 +807,11 @@ public class CalcUI extends javax.swing.JFrame {
     private javax.swing.JLabel num2Label;
     private javax.swing.JTextField num2Text;
     private javax.swing.JLabel operatorsLabel;
-    private javax.swing.JLabel operatorsLabel1;
     private javax.swing.JButton plusButton;
     private javax.swing.JButton powButton;
     private javax.swing.JLabel resultLabel;
     private javax.swing.JTextField resultTextBlocked;
+    private javax.swing.JButton secButton;
     private javax.swing.JButton sinButton;
     private javax.swing.JButton slashButton;
     private javax.swing.JButton sqrButton;
