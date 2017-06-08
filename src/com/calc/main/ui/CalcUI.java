@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2017 actis.pro.
+ * Copyright 2017 Denis Karev.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -419,7 +419,6 @@ public class CalcUI extends javax.swing.JFrame {
     }//GEN-LAST:event_clearButtonActionPerformed
 
     private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
-        System.out.println("Ну и вали нахуй отсюда!"); //это же никто не прочитает, ага?
         System.exit(0);
     }//GEN-LAST:event_exitButtonActionPerformed
 
