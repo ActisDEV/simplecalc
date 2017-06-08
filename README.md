@@ -1,6 +1,7 @@
 # simplecalc
-Самый простой запуск (только для Windows) - скачать файл SimpleCalc.exe в релизах и запустить - PROFIT!
-Для остальных: скачать SimpleCalc.jar и запустить с помощью консоли (java -jar SimpleCalc.jar)
+Установка: 
+1. Скачать SimpleCalculator.jar и SimpleCalculator.cmd
+2. Запустить, открыв SimpleCalculator.cmd
 
 Что калькулятор может?
 * Складывать, вычитать, умножать, делить 
