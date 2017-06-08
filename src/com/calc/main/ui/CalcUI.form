@@ -58,9 +58,23 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="num1Text" max="32767" attributes="0"/>
                       <Component id="num2Text" alignment="1" max="32767" attributes="0"/>
+                      <Component id="resultTextBlocked" alignment="1" max="32767" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="num1Label" min="-2" max="-2" attributes="0"/>
+                          <Component id="resultLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="operatorsLabel1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="clearButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="exitButton" min="-2" pref="82" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="arcsinButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="sinButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="num1Label" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="num2Label" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="operatorsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="plusButton" alignment="0" max="32767" attributes="0"/>
@@ -73,25 +87,24 @@
                                   <Component id="slashButton" min="-2" pref="100" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               </Group>
+                              <Component id="cosButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="arccosButton" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="powButton" pref="101" max="32767" attributes="0"/>
                               <Component id="sqrButton" max="32767" attributes="0"/>
+                              <Component id="tanButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="arctanButton" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="resultTextBlocked" alignment="1" max="32767" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Component id="resultLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="operatorsLabel1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="clearButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="exitButton" min="-2" pref="82" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="logButton" pref="101" max="32767" attributes="0"/>
+                              <Component id="log10Button" max="32767" attributes="0"/>
+                              <Component id="cotButton" alignment="0" max="32767" attributes="0"/>
+                              <Component id="arccotButton" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -116,18 +129,34 @@
                       <Component id="plusButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="slashButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="powButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="logButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="minusButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="starButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="sqrButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="log10Button" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="sinButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cosButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tanButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cotButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="arcsinButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="arccosButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="arctanButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="arccotButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
                   <Component id="resultLabel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="resultTextBlocked" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="operatorsLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="clearButton" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -237,6 +266,86 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exitButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="logButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="log"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="log10Button">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="log10"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="log10ButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="sinButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="sin"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sinButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="cosButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="cos"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cosButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="tanButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="tan"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tanButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="cotButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="cot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cotButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="arcsinButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="arcsin"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="arcsinButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="arccosButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="arccos"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="arccosButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="arctanButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="arctan"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="arctanButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="arccotButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="arccot"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="arccotButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

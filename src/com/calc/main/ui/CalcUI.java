@@ -65,6 +65,16 @@ public class CalcUI extends javax.swing.JFrame {
         operatorsLabel1 = new javax.swing.JLabel();
         clearButton = new javax.swing.JButton();
         exitButton = new javax.swing.JButton();
+        logButton = new javax.swing.JButton();
+        log10Button = new javax.swing.JButton();
+        sinButton = new javax.swing.JButton();
+        cosButton = new javax.swing.JButton();
+        tanButton = new javax.swing.JButton();
+        cotButton = new javax.swing.JButton();
+        arcsinButton = new javax.swing.JButton();
+        arccosButton = new javax.swing.JButton();
+        arctanButton = new javax.swing.JButton();
+        arccotButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -139,6 +149,76 @@ public class CalcUI extends javax.swing.JFrame {
             }
         });
 
+        logButton.setText("log");
+        logButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logButtonActionPerformed(evt);
+            }
+        });
+
+        log10Button.setText("log10");
+        log10Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                log10ButtonActionPerformed(evt);
+            }
+        });
+
+        sinButton.setText("sin");
+        sinButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sinButtonActionPerformed(evt);
+            }
+        });
+
+        cosButton.setText("cos");
+        cosButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cosButtonActionPerformed(evt);
+            }
+        });
+
+        tanButton.setText("tan");
+        tanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tanButtonActionPerformed(evt);
+            }
+        });
+
+        cotButton.setText("cot");
+        cotButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cotButtonActionPerformed(evt);
+            }
+        });
+
+        arcsinButton.setText("arcsin");
+        arcsinButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                arcsinButtonActionPerformed(evt);
+            }
+        });
+
+        arccosButton.setText("arccos");
+        arccosButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                arccosButtonActionPerformed(evt);
+            }
+        });
+
+        arctanButton.setText("arctan");
+        arctanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                arctanButtonActionPerformed(evt);
+            }
+        });
+
+        arccotButton.setText("arccot");
+        arccotButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                arccotButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
@@ -148,24 +228,6 @@ public class CalcUI extends javax.swing.JFrame {
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(num1Text)
                     .addComponent(num2Text, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(num1Label)
-                            .addComponent(num2Label)
-                            .addComponent(operatorsLabel)
-                            .addComponent(plusButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(minusButton, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(starButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addComponent(slashButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(powButton, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
-                            .addComponent(sqrButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(165, 165, 165))
                     .addComponent(resultTextBlocked, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(mainPanelLayout.createSequentialGroup()
                         .addComponent(resultLabel)
@@ -175,7 +237,37 @@ public class CalcUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(clearButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(mainPanelLayout.createSequentialGroup()
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(arcsinButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(sinButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(num1Label, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(num2Label, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(operatorsLabel, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(plusButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(minusButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(starButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(mainPanelLayout.createSequentialGroup()
+                                .addComponent(slashButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(cosButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(arccosButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(powButton, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                            .addComponent(sqrButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(arctanButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(logButton, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
+                            .addComponent(log10Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cotButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(arccotButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(58, 58, 58)))
                 .addContainerGap())
         );
         mainPanelLayout.setVerticalGroup(
@@ -195,17 +287,31 @@ public class CalcUI extends javax.swing.JFrame {
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(plusButton)
                     .addComponent(slashButton)
-                    .addComponent(powButton))
+                    .addComponent(powButton)
+                    .addComponent(logButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(minusButton)
                     .addComponent(starButton)
-                    .addComponent(sqrButton))
+                    .addComponent(sqrButton)
+                    .addComponent(log10Button))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(sinButton)
+                    .addComponent(cosButton)
+                    .addComponent(tanButton)
+                    .addComponent(cotButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(arcsinButton)
+                    .addComponent(arccosButton)
+                    .addComponent(arctanButton)
+                    .addComponent(arccotButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(resultLabel)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(resultTextBlocked, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(operatorsLabel1)
                     .addComponent(clearButton)
@@ -285,6 +391,46 @@ public class CalcUI extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_exitButtonActionPerformed
 
+    private void logButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_logButtonActionPerformed
+
+    private void log10ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_log10ButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_log10ButtonActionPerformed
+
+    private void sinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sinButtonActionPerformed
+
+    private void cosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cosButtonActionPerformed
+
+    private void tanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tanButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tanButtonActionPerformed
+
+    private void cotButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cotButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cotButtonActionPerformed
+
+    private void arcsinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arcsinButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_arcsinButtonActionPerformed
+
+    private void arccosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arccosButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_arccosButtonActionPerformed
+
+    private void arctanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arctanButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_arctanButtonActionPerformed
+
+    private void arccotButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arccotButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_arccotButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -300,8 +446,16 @@ public class CalcUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton arccosButton;
+    private javax.swing.JButton arccotButton;
+    private javax.swing.JButton arcsinButton;
+    private javax.swing.JButton arctanButton;
     private javax.swing.JButton clearButton;
+    private javax.swing.JButton cosButton;
+    private javax.swing.JButton cotButton;
     private javax.swing.JButton exitButton;
+    private javax.swing.JButton log10Button;
+    private javax.swing.JButton logButton;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JButton minusButton;
     private javax.swing.JLabel num1Label;
@@ -314,8 +468,10 @@ public class CalcUI extends javax.swing.JFrame {
     private javax.swing.JButton powButton;
     private javax.swing.JLabel resultLabel;
     private javax.swing.JTextField resultTextBlocked;
+    private javax.swing.JButton sinButton;
     private javax.swing.JButton slashButton;
     private javax.swing.JButton sqrButton;
     private javax.swing.JButton starButton;
+    private javax.swing.JButton tanButton;
     // End of variables declaration//GEN-END:variables
 }
