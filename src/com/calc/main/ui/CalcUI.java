@@ -48,6 +48,17 @@ public class CalcUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        help = new javax.swing.JDialog();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         mainPanel = new javax.swing.JPanel();
         num1Label = new javax.swing.JLabel();
         num1Text = new javax.swing.JTextField();
@@ -75,6 +86,77 @@ public class CalcUI extends javax.swing.JFrame {
         arccosButton = new javax.swing.JButton();
         arctanButton = new javax.swing.JButton();
         arccotButton = new javax.swing.JButton();
+        helpButton = new javax.swing.JButton();
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel1.setText("Справка");
+
+        jLabel2.setText("Стандартные бинарные операции (+, -, *, /). Первое число - основное, второе ");
+
+        jLabel3.setText("может быть вычитыаемым или делителем.");
+
+        jLabel4.setText("Возведение в степень/извлечение корня - первое число является возводимым, второе");
+
+        jLabel5.setText("основанием.");
+
+        jLabel6.setText("Логарифмы - log является натуральным логарифмом (по e), а log10 - десятичным. В кач-");
+
+        jLabel7.setText("естве второго числа подставляется основание (e или 10).");
+
+        jLabel8.setText("Тригонометрические функции - первым числом введите угол, вторым параметр (rad/grad)");
+
+        jLabel9.setText("grad - если угол в градусах, rad - если в радианах.");
+
+        jButton1.setText("OK");
+
+        javax.swing.GroupLayout helpLayout = new javax.swing.GroupLayout(help.getContentPane());
+        help.getContentPane().setLayout(helpLayout);
+        helpLayout.setHorizontalGroup(
+            helpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(helpLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(helpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9)
+                    .addGroup(helpLayout.createSequentialGroup()
+                        .addGap(195, 195, 195)
+                        .addComponent(jButton1))
+                    .addGroup(helpLayout.createSequentialGroup()
+                        .addGap(183, 183, 183)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        helpLayout.setVerticalGroup(
+            helpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(helpLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -219,6 +301,13 @@ public class CalcUI extends javax.swing.JFrame {
             }
         });
 
+        helpButton.setText("Help");
+        helpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                helpButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
         mainPanel.setLayout(mainPanelLayout);
         mainPanelLayout.setHorizontalGroup(
@@ -235,6 +324,8 @@ public class CalcUI extends javax.swing.JFrame {
                     .addGroup(mainPanelLayout.createSequentialGroup()
                         .addComponent(operatorsLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(helpButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(clearButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -315,7 +406,8 @@ public class CalcUI extends javax.swing.JFrame {
                 .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(operatorsLabel1)
                     .addComponent(clearButton)
-                    .addComponent(exitButton)))
+                    .addComponent(exitButton)
+                    .addComponent(helpButton)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -431,6 +523,10 @@ public class CalcUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_arccotButtonActionPerformed
 
+    private void helpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_helpButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -454,6 +550,18 @@ public class CalcUI extends javax.swing.JFrame {
     private javax.swing.JButton cosButton;
     private javax.swing.JButton cotButton;
     private javax.swing.JButton exitButton;
+    private javax.swing.JDialog help;
+    private javax.swing.JButton helpButton;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JButton log10Button;
     private javax.swing.JButton logButton;
     private javax.swing.JPanel mainPanel;

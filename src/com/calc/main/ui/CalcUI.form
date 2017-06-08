@@ -1,6 +1,121 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JDialog" name="help">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="195" max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="18" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x421;&#x43f;&#x440;&#x430;&#x432;&#x43a;&#x430;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x421;&#x442;&#x430;&#x43d;&#x434;&#x430;&#x440;&#x442;&#x43d;&#x44b;&#x435; &#x431;&#x438;&#x43d;&#x430;&#x440;&#x43d;&#x44b;&#x435; &#x43e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x438; (+, -, *, /). &#x41f;&#x435;&#x440;&#x432;&#x43e;&#x435; &#x447;&#x438;&#x441;&#x43b;&#x43e; - &#x43e;&#x441;&#x43d;&#x43e;&#x432;&#x43d;&#x43e;&#x435;, &#x432;&#x442;&#x43e;&#x440;&#x43e;&#x435; "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x43c;&#x43e;&#x436;&#x435;&#x442; &#x431;&#x44b;&#x442;&#x44c; &#x432;&#x44b;&#x447;&#x438;&#x442;&#x44b;&#x430;&#x435;&#x43c;&#x44b;&#x43c; &#x438;&#x43b;&#x438; &#x434;&#x435;&#x43b;&#x438;&#x442;&#x435;&#x43b;&#x435;&#x43c;."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x412;&#x43e;&#x437;&#x432;&#x435;&#x434;&#x435;&#x43d;&#x438;&#x435; &#x432; &#x441;&#x442;&#x435;&#x43f;&#x435;&#x43d;&#x44c;/&#x438;&#x437;&#x432;&#x43b;&#x435;&#x447;&#x435;&#x43d;&#x438;&#x435; &#x43a;&#x43e;&#x440;&#x43d;&#x44f; - &#x43f;&#x435;&#x440;&#x432;&#x43e;&#x435; &#x447;&#x438;&#x441;&#x43b;&#x43e; &#x44f;&#x432;&#x43b;&#x44f;&#x435;&#x442;&#x441;&#x44f; &#x432;&#x43e;&#x437;&#x432;&#x43e;&#x434;&#x438;&#x43c;&#x44b;&#x43c;, &#x432;&#x442;&#x43e;&#x440;&#x43e;&#x435;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x43e;&#x441;&#x43d;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;&#x43c;."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x41b;&#x43e;&#x433;&#x430;&#x440;&#x438;&#x444;&#x43c;&#x44b; - log &#x44f;&#x432;&#x43b;&#x44f;&#x435;&#x442;&#x441;&#x44f; &#x43d;&#x430;&#x442;&#x443;&#x440;&#x430;&#x43b;&#x44c;&#x43d;&#x44b;&#x43c; &#x43b;&#x43e;&#x433;&#x430;&#x440;&#x438;&#x444;&#x43c;&#x43e;&#x43c; (&#x43f;&#x43e; e), &#x430; log10 - &#x434;&#x435;&#x441;&#x44f;&#x442;&#x438;&#x447;&#x43d;&#x44b;&#x43c;. &#x412; &#x43a;&#x430;&#x447;-"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x435;&#x441;&#x442;&#x432;&#x435; &#x432;&#x442;&#x43e;&#x440;&#x43e;&#x433;&#x43e; &#x447;&#x438;&#x441;&#x43b;&#x430; &#x43f;&#x43e;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43b;&#x44f;&#x435;&#x442;&#x441;&#x44f; &#x43e;&#x441;&#x43d;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; (e &#x438;&#x43b;&#x438; 10)."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x422;&#x440;&#x438;&#x433;&#x43e;&#x43d;&#x43e;&#x43c;&#x435;&#x442;&#x440;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438;&#x435; &#x444;&#x443;&#x43d;&#x43a;&#x446;&#x438;&#x438; - &#x43f;&#x435;&#x440;&#x432;&#x44b;&#x43c; &#x447;&#x438;&#x441;&#x43b;&#x43e;&#x43c; &#x432;&#x432;&#x435;&#x434;&#x438;&#x442;&#x435; &#x443;&#x433;&#x43e;&#x43b;, &#x432;&#x442;&#x43e;&#x440;&#x44b;&#x43c; &#x43f;&#x430;&#x440;&#x430;&#x43c;&#x435;&#x442;&#x440; (rad/grad)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel9">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="grad - &#x435;&#x441;&#x43b;&#x438; &#x443;&#x433;&#x43e;&#x43b; &#x432; &#x433;&#x440;&#x430;&#x434;&#x443;&#x441;&#x430;&#x445;, rad - &#x435;&#x441;&#x43b;&#x438; &#x432; &#x440;&#x430;&#x434;&#x438;&#x430;&#x43d;&#x430;&#x445;."/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="OK"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -66,6 +181,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="operatorsLabel1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
+                          <Component id="helpButton" min="-2" pref="80" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="clearButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="exitButton" min="-2" pref="82" max="-2" attributes="0"/>
@@ -161,6 +278,7 @@
                       <Component id="operatorsLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="clearButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="exitButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="helpButton" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -346,6 +464,14 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="arccotButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="helpButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Help"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="helpButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
